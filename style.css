@@ -11,13 +11,14 @@
 
 
  .hero {
-   background-color: rgba(0, 0, 0, 0.584);
+   background-color: rgba(202, 188, 188, 0.635);
    background-image: url("img/prfemme.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
-   background-attachment: fixed;
+   background-attachment: ;
    background-blend-mode: multiply;
+   height: 400px;
    padding: 60px;
   display: flex;
   flex-direction: column;
@@ -36,16 +37,8 @@
         background-position: center;
         /* Réduit la hauteur pour gagner de la place sur mobile */
         height: 100px;
-        
-        
-        /* Réduit le padding */
-        padding: 60px;
-
-        /* Souvent nécessaire : désactiver le "fixed" sur mobile pour éviter des bugs d'affichage */
         background-attachment: scroll; 
 
-        /* Vous pouvez aussi changer la taille du fond sur mobile si nécessaire */
-        /* background-size: contain; */
     }
 }
   
@@ -66,20 +59,23 @@
 
 
 body {
-    background-color: #F4F4F4;
+    background-color: #FFF8F0;
      font-family:  'Open Sans', 'Helvetica Neue', sans-serif;
 }
  
+
 .navbar { 
-    background-color: #1A1A1A;
+    background-color: #FFF8F0;
+    position: fixed;
+    width: 100%;
     padding: 10px;
+    z-index: 100;
+   box-shadow: 0 2px 4px rgba(99, 236, 14, 0.852);
    
-    
     top: 0;
-    left: 0;
-    
-   
+    left: 0;   
 }
+
 .navbar ul {
     margin: 0;
     padding: 0;
@@ -97,23 +93,99 @@ body {
 }
 
 .navbar li a {
-    color: #E0C17E;
+    color: #B8860B;
     text-decoration: none;
 }
 
 
+.hamburger {
+   background-color: #FFF8F0;
+   height: 100%;
+   border: solid;
+   margin-left: 10px;
+  
+   gap: 5px;
+   padding-top: 12px;
+}
 
-div h1 {
+
+
+
+
+
+
+@media (max-width: 768px) {
+/* 1. Afficher le bouton et cacher le menu classique */
+    .second-navbar { /* Garder le hamburger visible */
+        display: block; 
+
+    }
+
+    .hamburger {
+      border: none;
+      top: 0;
+      height: 40px;
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+    }
+    span {
+      background-color: #1A1A1A;
+      height: 3px;
+      width: 30px;
+    }
+
+    .navbar {
+     display: block;
+    }
+
+    .second-navbar {
+    background-color: #FFF8F0;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(99, 236, 14, 0.852);
+    top: 0;
+    left: 0;   
+    height: 20px;
+    } 
+    .navbar ul {
+      
+        /* L'état CACHÉ par défaut */
+        display: none; 
+        /* Préparer pour un affichage vertical */
+        flex-direction: column; 
+    }
+
+    /* 2. L'état DÉPLOYÉ (quand le JS ajoute la classe 'active') */
+    .navbar ul.active {
+        display: flex; /* ou block, selon votre mise en page */
+        /* Positionner le menu pour qu'il couvre la page ou s'étende */
+        position: absolute; 
+        top: 40px; /* Exemple de hauteur sous la barre d'en-tête */
+        width: 100%;
+        background-color: #f8f8f8; /* Un fond pour le menu déployé */
+    }
+}
+  
+
+
+
+
+ h1 {
+    padding-top: 80px;
     color: #E0C17E;
     font-size: 50px;
     font-weight: bolder;   
 }
 
 @media (max-width: 768px) {
- div h1 {
+ h1 {
     color: #E0C17E;
     font-size: 20px;
     font-weight: bolder;   
+   
 }
 }
 
@@ -134,9 +206,9 @@ h2 {
     color: black;
     border-radius: 5px;
    font-size: 10px;
-   padding: 15px;
     width: 50%;
     text-align: center;
+    padding:10px ;
 }
 }
 
@@ -145,27 +217,51 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding: 20px;
+    
+    
 }
 .defile div {
-   padding: 30px;
-   background-color: #E0C17E;
-   height: 300px;
+   
+   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+   height: 400px;
    width: 200px;
+   border-radius: 8px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.product-name {
+  color: #1A1A1A;
+}
+.product-image {
+  
+}
+
+.product-price {
+  color: #B8860B;
+}
+
+
+.add-to-cart {
+  background-color: #C8A845;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
 }
 
 .footer {
     background-color: rgb(229, 221, 221);
     opacity: 0.7;
    padding: 40px;
-   
+   margin-top: 100px;
    display: flex;
    
 
 }
 
 .footer div {
-    background-color: #E0C17E;
+    
     padding: 20px;
     margin: auto;
     height: 200px;
@@ -173,6 +269,11 @@ h2 {
     
 }
 
+.media li {
+    
+ list-style: none;
+    
+}
 .media a {
     
   text-decoration: none;
@@ -198,3 +299,4 @@ h2 {
  text-decoration: none;  
     
 }
+
