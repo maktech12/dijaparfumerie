@@ -17,7 +17,7 @@
 h1 {
   font-family: "Electrolize", sans-serif;
   font-style: italic;
-  font-size: 150%;
+  font-size: 200%;
   font-weight: bolder;   
   padding-top: 100px;
   height: 10%;
@@ -153,13 +153,22 @@ h2 {
      h1 {     
         font-family: "Electrolize", sans-serif;
         font-style: italic;
-        font-size: 100%;
+        font-size: 80%;
         font-weight: bolder;   
         padding-top: 100px;
         height: 10%;
         width: 50%;
         text-align: center;
         color: #21486c;   
+}
+
+    h2 {
+        font-family: 'Garet';
+        font-style: italic;
+        font-size: 70%;
+        color: white;
+        width: 50%;
+        text-align: center;  
 }
    
 }
@@ -170,15 +179,7 @@ h2 {
 
   
 @media (max-width: 768px) {
-h2 {
-   background-color:#FAFAFA;
-    color: black;
-    border-radius: 5px;
-   font-size: 10px;
-    width: 50%;
-    text-align: center;
-    padding:10px ;
-}
+
 }
 
 
