@@ -68,9 +68,16 @@ body {
     background-color: #FFF8F0;
     position: fixed;
     width: 100%;
-    padding: 10px;
     z-index: 100;
    box-shadow: 0 2px 4px rgba(99, 236, 14, 0.852);
+   display: flex;
+   flex-direction: row;
+
+   /* justify-content: space-between; : C'est la propriété essentielle pour placer le premier élément (votre logo) à l'extrême gauche et le dernier élément (votre liste de liens ul) à l'extrême droite.*/
+   justify-content: space-between;
+   align-items: center;
+  
+  
    
     top: 0;
     left: 0;   
@@ -79,16 +86,17 @@ body {
 .navbar ul {
     margin: 0;
     padding: 0;
-   
-    display: flex;
-    justify-content: flex-end;
-    
+   display: flex;
+   flex-direction: row;
+  
+  
     
 }
 
 .navbar li {
     list-style: none;
-    margin-right: 15px;
+    margin-right: 20px;
+    
 
 }
 
@@ -97,7 +105,17 @@ body {
     text-decoration: none;
 }
 
+.logo-img {
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+}
+.logo-div {
+  width: 15%;
+  height: 100%;
+ 
 
+}
 .hamburger {
    background-color: #FFF8F0;
    height: 100%;
@@ -166,6 +184,10 @@ body {
         top: 40px; /* Exemple de hauteur sous la barre d'en-tête */
         width: 100%;
         background-color: #f8f8f8; /* Un fond pour le menu déployé */
+    }
+
+    .logo-div {
+      display: none;
     }
 }
   
