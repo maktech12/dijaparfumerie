@@ -1,15 +1,7 @@
-@media (max-width: 768px) {
-  .defile {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
 
-  
-
-}
 
 .hero-div {
+  background-color: whitesmoke;
   height: 500px;
   background-image: url(img/prfemme.jpg);
   background-size: cover;
@@ -18,44 +10,165 @@
   background-blend-mode: multiply;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 
 h1 {
-  width:100%;
+  font-family: "Electrolize", sans-serif;
+  font-style: italic;
+  font-size: 150%;
+  font-weight: bolder;   
+  padding-top: 100px;
+  height: 10%;
+  width: 50%;
   text-align: center;
-    color: #E0C17E;
-    font-size: 50px;
-    font-weight: bolder;   
-   
-    
+  color: #21486c;   
 }
 
- h2 {
-  
-   background-color:#FAFAFA;
-    color: black;
-    width: 50%;
-    text-align: center;
-    border-radius: 5px;
+h2 {
+  font-family: 'Garet';
+  font-style: italic;
+  font-size: 120%;
+  color: white;
+  width: 50%;
+  text-align: center;  
+}
+
+.product-sec{
    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    
+    
+}
+.product-sec div {
+   
+   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+   height: 400px;
+   width: 200px;
+   border-radius: 8px;
+   padding: 20px;
+   background-color: #ffffff;
+}
+
+.product-name {
+  color: #1A1A1A;
+}
+.product-image {
+  
+}
+
+.product-price {
+  color: #B8860B;
+}
+
+
+.add-to-cart {
+  background-color: #C8A845;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
- h1 {
-    width: 100%;
-    color: #E0C17E;
-    font-size: 20px;
-    font-weight: bolder;   
+  .defile {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+}
+
+
+.footer {
+    background-color: rgb(229, 221, 221);
+    opacity: 0.7;
+   padding: 40px;
+   margin-top: 100px;
+   display: flex;
+   
+
+}
+
+.footer div {
+    
+    padding: 20px;
+    margin: auto;
+    height: 200px;
+    width: 300px;
+    
+}
+
+.media li {
+    
+ list-style: none;
+    
+}
+.media a {
+    
+  text-decoration: none;
+    
+}
+
+
+.nous li{  
+  list-style: none;
+}
+
+.nous a{  
+  text-decoration: none;  
+}
+
+.contact li {
+    
+ list-style: none;
+    
+}
+.contact li a {
+    
+ text-decoration: none;  
+    
+}
+
+ @media (max-width: 768px) {
+    .hero-div {
+
+        background-color: whitesmoke;
+        height: 400px;
+        background-image: url(img/prfemme.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;  
+        background-blend-mode: multiply;
+        display: flex;
+        flex-direction: column;
+        background-attachment: scroll; 
+
+    }
+
+     h1 {     
+        font-family: "Electrolize", sans-serif;
+        font-style: italic;
+        font-size: 100%;
+        font-weight: bolder;   
+        padding-top: 100px;
+        height: 10%;
+        width: 50%;
+        text-align: center;
+        color: #21486c;   
+}
    
 }
-}
 
 
 
 
+
+  
 @media (max-width: 768px) {
 h2 {
    background-color:#FAFAFA;
@@ -68,22 +181,6 @@ h2 {
 }
 }
 
-
- @media (max-width: 768px) {
-    .hero-div {
-
-        background-color: rgba(0, 0, 0, 0.584);
-        background-image: url("img/prfemme.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        /* Réduit la hauteur pour gagner de la place sur mobile */
-        height: 100px;
-        background-attachment: scroll; 
-
-    }
-}
-  
 
 
 
@@ -238,92 +335,4 @@ body {
 
 
  
-
-.defile {
-   
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
-    
-}
-.defile div {
-   
-   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
-   height: 400px;
-   width: 200px;
-   border-radius: 8px;
-    padding: 20px;
-    background-color: #ffffff;
-}
-
-.product-name {
-  color: #1A1A1A;
-}
-.product-image {
-  
-}
-
-.product-price {
-  color: #B8860B;
-}
-
-
-.add-to-cart {
-  background-color: #C8A845;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  color: #FFFFFF;
-}
-
-.footer {
-    background-color: rgb(229, 221, 221);
-    opacity: 0.7;
-   padding: 40px;
-   margin-top: 100px;
-   display: flex;
-   
-
-}
-
-.footer div {
-    
-    padding: 20px;
-    margin: auto;
-    height: 200px;
-    width: 300px;
-    
-}
-
-.media li {
-    
- list-style: none;
-    
-}
-.media a {
-    
-  text-decoration: none;
-    
-}
-
-
-.nous li{  
-  list-style: none;
-}
-
-.nous a{  
-  text-decoration: none;  
-}
-
-.contact li {
-    
- list-style: none;
-    
-}
-.contact li a {
-    
- text-decoration: none;  
-    
-}
 
