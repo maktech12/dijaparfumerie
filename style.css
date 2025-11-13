@@ -1,5 +1,85 @@
 
 
+body {
+    background-color: #FFF8F0;
+     font-family:  'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.navbar { 
+    top: 0;
+    left: 0;   
+    background-color: #FFF8F0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+   box-shadow: 0 2px 4px rgba(99, 236, 14, 0.852);
+   display: flex;
+   flex-direction: row;
+
+   /* justify-content: space-between; : C'est la propriété essentielle pour placer le premier élément (votre logo) à l'extrême gauche et le dernier élément (votre liste de liens ul) à l'extrême droite.*/
+   justify-content: space-between;
+   align-items: center;  
+}
+
+.panier-div {
+  padding-right: 2vw;
+}
+
+.panier-img {
+  width: 3vw;
+  height: 3vw;
+}
+
+.navbar ul {
+  width: 70vw;
+  margin: 0;
+  padding: 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: end;
+  
+  
+    
+}
+
+.navbar li {
+    list-style: none;
+    margin-right: 20px;
+    
+
+}
+
+.navbar li a {
+    color: #B8860B;
+    text-decoration: none;
+}
+
+.logo-img {
+  width: 10vw;
+  height: 3.5vw;
+  margin-left: 20px;
+}
+.logo-div {
+ padding-left: 2vw;
+ 
+
+}
+.hamburger {
+   background-color: #FFF8F0;
+   height: 100%;
+   border: solid;
+   margin-left: 10px;
+  
+   gap: 5px;
+   padding-top: 12px;
+}
+
+.second-navbar {
+  display: none;
+}
+
+
 .hero-div {
   background-color: whitesmoke;
   height: 500px;
@@ -11,28 +91,32 @@
   display: flex;
   flex-direction: column;
   
+  
 }
 
 
 h1 {
+
   font-family: "Electrolize", sans-serif;
   font-style: italic;
-  font-size: 200%;
+  font-size: 3vw;
   font-weight: bolder;   
   padding-top: 100px;
+  padding-left: 1vw;
   height: 10%;
-  width: 50%;
-  text-align: center;
+  width: 90%;
+  text-align: left;
   color: #21486c;   
 }
 
 h2 {
   font-family: 'Garet';
   font-style: italic;
-  font-size: 120%;
+  font-size: 2vw;
   color: white;
-  width: 50%;
-  text-align: center;  
+  width: 90%;
+  text-align: left;  
+  padding-left: 1vw;
 }
 
 .product-sec{
@@ -57,9 +141,7 @@ h2 {
 .product-name {
   color: #1A1A1A;
 }
-.product-image {
-  
-}
+
 
 .product-price {
   color: #B8860B;
@@ -82,7 +164,6 @@ h2 {
   }
 
 }
-
 
 .footer {
     background-color: rgb(229, 221, 221);
@@ -153,22 +234,24 @@ h2 {
      h1 {     
         font-family: "Electrolize", sans-serif;
         font-style: italic;
-        font-size: 80%;
+        font-size: 3vw;
         font-weight: bolder;   
         padding-top: 100px;
         height: 10%;
-        width: 50%;
-        text-align: center;
+        width: 90%;
+        text-align:left;
         color: #21486c;   
+        padding-left: 2vw;
 }
 
     h2 {
         font-family: 'Garet';
         font-style: italic;
-        font-size: 70%;
+        font-size: 2vw;
         color: white;
-        width: 50%;
-        text-align: center;  
+        width: 90%;
+        text-align:left; 
+        padding-left: 2vw; 
 }
    
 }
@@ -177,96 +260,7 @@ h2 {
 
 
 
-  
-@media (max-width: 768px) {
-
-}
-
-
-
-
-
-
-
-@media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-}
-
-
-
-body {
-    background-color: #FFF8F0;
-     font-family:  'Open Sans', 'Helvetica Neue', sans-serif;
-}
  
-
-.navbar { 
-    background-color: #FFF8F0;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-   box-shadow: 0 2px 4px rgba(99, 236, 14, 0.852);
-   display: flex;
-   flex-direction: row;
-
-   /* justify-content: space-between; : C'est la propriété essentielle pour placer le premier élément (votre logo) à l'extrême gauche et le dernier élément (votre liste de liens ul) à l'extrême droite.*/
-   justify-content: space-between;
-   align-items: center;
-  
-  
-   
-    top: 0;
-    left: 0;   
-}
-
-.navbar ul {
-    margin: 0;
-    padding: 0;
-   display: flex;
-   flex-direction: row;
-  
-  
-    
-}
-
-.navbar li {
-    list-style: none;
-    margin-right: 20px;
-    
-
-}
-
-.navbar li a {
-    color: #B8860B;
-    text-decoration: none;
-}
-
-.logo-img {
-  width: 100%;
-  height: 100%;
-  margin-left: 20px;
-}
-.logo-div {
-  width: 15%;
-  height: 100%;
- 
-
-}
-.hamburger {
-   background-color: #FFF8F0;
-   height: 100%;
-   border: solid;
-   margin-left: 10px;
-  
-   gap: 5px;
-   padding-top: 12px;
-}
-
-
 
 
 
@@ -315,7 +309,7 @@ body {
         /* Préparer pour un affichage vertical */
         flex-direction: column; 
     }
-
+ 
     /* 2. L'état DÉPLOYÉ (quand le JS ajoute la classe 'active') */
     .navbar ul.active {
         display: flex; /* ou block, selon votre mise en page */
@@ -329,6 +323,8 @@ body {
     .logo-div {
       display: none;
     }
+
+  
 }
   
 
