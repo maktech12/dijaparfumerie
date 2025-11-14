@@ -22,14 +22,18 @@ body {
    align-items: center;  
 }
 
-.panier-div {
-  padding-right: 2vw;
+.icons-div  {
+  padding-right: 4vw;
+
+ 
 }
 
-.panier-img {
-  width: 3vw;
-  height: 3vw;
+.panier-img , .compte-img{
+  padding-right: 2vw;
+  width: 2vw;
+  height: 2vw;
 }
+
 
 .navbar ul {
   width: 70vw;
@@ -70,7 +74,6 @@ body {
    height: 100%;
    border: solid;
    margin-left: 10px;
-  
    gap: 5px;
    padding-top: 12px;
 }
@@ -80,23 +83,22 @@ body {
 }
 
 
+
 .hero-div {
-  background-color: whitesmoke;
-  height: 500px;
-  background-image: url(img/prfemme.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: repeat;  
-  background-blend-mode: multiply;
+ 
   display: flex;
   flex-direction: column;
   
-  
+}
+
+.hero-img {
+     width: 100%;
+    
 }
 
 
 h1 {
-
+  position: absolute;
   font-family: "Electrolize", sans-serif;
   font-style: italic;
   font-size: 3vw;
@@ -110,6 +112,8 @@ h1 {
 }
 
 h2 {
+  padding-top: 160px;
+  position: absolute;
   font-family: 'Garet';
   font-style: italic;
   font-size: 2vw;
@@ -156,33 +160,21 @@ h2 {
   color: #FFFFFF;
 }
 
-@media (max-width: 768px) {
-  .defile {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
 
-}
-
-.footer {
-    background-color: rgb(229, 221, 221);
+.footer-div {
     opacity: 0.7;
-   padding: 40px;
-   margin-top: 100px;
+    padding: 40px;
+    margin-top: 100px;
+    display: flex;
    display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   justify-content: center;
+   gap: 60px;
    
-
-}
-
-.footer div {
-    
-    padding: 20px;
-    margin: auto;
-    height: 200px;
-    width: 300px;
     
 }
+
 
 .media li {
     
@@ -216,28 +208,28 @@ h2 {
 }
 
  @media (max-width: 768px) {
+  
+
     .hero-div {
+ 
+  display: flex;
+  flex-direction: column;
+  
+ 
+  
+}
 
-        background-color: whitesmoke;
-        height: 400px;
-        background-image: url(img/prfemme.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: repeat;  
-        background-blend-mode: multiply;
-        display: flex;
-        flex-direction: column;
-        background-attachment: scroll; 
-
-    }
+.hero-img {
+     width: 100%;
+}
 
      h1 {     
+        margin-top: -19px;
+        position: absolute;
         font-family: "Electrolize", sans-serif;
         font-style: italic;
         font-size: 3vw;
         font-weight: bolder;   
-        padding-top: 100px;
-        height: 10%;
         width: 90%;
         text-align:left;
         color: #21486c;   
@@ -245,6 +237,8 @@ h2 {
 }
 
     h2 {
+        padding-top: 100px;
+        position: absolute;
         font-family: 'Garet';
         font-style: italic;
         font-size: 2vw;
@@ -252,26 +246,22 @@ h2 {
         width: 90%;
         text-align:left; 
         padding-left: 2vw; 
-}
+    }
    
-}
-
-
-
-
-
  
+  .defile {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
-
-
-
-
-@media (max-width: 768px) {
-/* 1. Afficher le bouton et cacher le menu classique */
+  /* 1. Afficher le bouton et cacher le menu classique */
     .second-navbar { /* Garder le hamburger visible */
         display: block; 
 
     }
+
+  
 
     .hamburger {
       border: none;
@@ -281,6 +271,7 @@ h2 {
       display: flex;
       flex-direction: column;
     }
+   
     span {
       background-color: #1A1A1A;
       height: 3px;
@@ -290,8 +281,9 @@ h2 {
     .navbar {
      display: block;
     }
-
+  
     .second-navbar {
+     
     background-color: #FFF8F0;
     position: fixed;
     width: 100%;
@@ -301,13 +293,31 @@ h2 {
     top: 0;
     left: 0;   
     height: 20px;
+    
     } 
+
+   .icons-div {
+    margin-left: 60px;
+   display: flex;
+   flex-direction: row;
+    width: 80%;
+   justify-content: flex-end;
+   
+   }
+.panier-img , .compte-img {
+  width: 23px;
+  height: 23px;
+}
+  
+   
     .navbar ul {
       
         /* L'état CACHÉ par défaut */
         display: none; 
         /* Préparer pour un affichage vertical */
         flex-direction: column; 
+        
+        
     }
  
     /* 2. L'état DÉPLOYÉ (quand le JS ajoute la classe 'active') */
@@ -318,15 +328,39 @@ h2 {
         top: 40px; /* Exemple de hauteur sous la barre d'en-tête */
         width: 100%;
         background-color: #f8f8f8; /* Un fond pour le menu déployé */
+       
+     
+    }
+
+    .navbar ul.active li {
+      padding-left: 10px;
     }
 
     .logo-div {
       display: none;
     }
 
-  
+    .footer-div {
+    opacity: 0.7;
+    padding: 40px;
+    margin-top: 100px;
+    display: flex;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 20px;
+   align-items: center;
+    
 }
-  
+
+.footer-div div {
+  width: 60%;
+ 
+ 
+}
+
+}
+
 
 
 
