@@ -1,0 +1,56 @@
+body {
+  
+background-color: #FFF8F0;
+   
+}
+
+.hero-text {
+    color: #21486c;
+   
+}
+
+section {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.hero-form {
+
+
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+   padding-left: 800px;
+    padding: 10px;
+    background-color: aquamarine;
+    margin-top: 90px;
+    height: 400px;
+    width: 300px;
+    
+    
+}
+
+
+.form-group {
+    padding: 10px;
+}
+
+input {
+    border-radius: 5px;
+    width: 100%;
+    
+}
+button {
+    background-color: #B8860B;
+    padding: 5px;
+    width: 50%;
+    border-radius: 5px;
+    border: solid;
+}
+

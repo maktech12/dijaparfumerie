@@ -196,11 +196,6 @@ h2 {
     
 }
 
-.footer-div div {
-  
- 
-}
-
 
 .media li {
     
@@ -231,6 +226,10 @@ h2 {
     
  text-decoration: none;  
     
+}
+
+.copyright {
+  padding: 30px;
 }
 
  @media (max-width: 768px) {
