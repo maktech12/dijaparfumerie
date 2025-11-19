@@ -1,5 +1,7 @@
 
-
+* {
+ margin: 0;
+}
 body {
     background-color: #FFF8F0;
      font-family:  'Open Sans', 'Helvetica Neue', sans-serif;
@@ -22,17 +24,6 @@ body {
    align-items: center;  
 }
 
-.icons-div  {
-  padding-right: 4vw;
-
- 
-}
-
-.panier-img , .compte-img{
-  padding-right: 2vw;
-  width: 2vw;
-  height: 2vw;
-}
 
 
 .navbar ul {
@@ -110,7 +101,7 @@ h1 {
   color: #21486c;   
 }
 
-h2 {
+.credo {
   padding-top: 160px;
   position: absolute;
   font-family: 'Garet';
@@ -182,14 +173,16 @@ h2 {
 
 
 .footer-div {
+  padding-top: 20px;
   width: 100%;
     opacity: 0.7;
-    margin-top: 100px;
+   
     padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
    flex-direction: row;
    justify-content: space-around;
+   box-shadow: 0 -2px 2px -2px rgba(0, 0, 0, 0.3);
    
    gap: 50px;
    
@@ -386,9 +379,229 @@ h2 {
 
 }
 
+.about-sec {
+  margin-top: 60px;
+ box-shadow: 0 -2px 2px -2px rgba(0, 0, 0, 0.3);
+}
+
+.about-div {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+  /*box-shadow: [décalage horizontal] [décalage vertical] [rayon de flou] [rayon d'étalement] [couleur];*/
+ 
+ 
+ 
+  gap: 20px;
+  
+}
+
+.about-title {
+  padding-top: 20px;
+  text-align: center;
+  color: #B8860B;
+}
+
+
+.admin {
+  background-color: ;
+  
+  width: 100vw;
+  padding: 20px;
+  text-align: justify;
+}
+
+.admin h3 {
+  color: #B8860B;
+}
+
+.admi-img {
+  height: 15vw;
+  width: 15vw;
+  border: solid #B8860B;
+  border-radius: 50%;
+}
+
+.about-text {
+  width: 100vw;
+ 
+  padding: 20px;
+  text-align: justify;
+}
+
+
+.about-hero {
+  color: #1A1A1A;
+  position: relative;
+}
+
+.site-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: #C8A845;
+}
 
 
 
+.icons-div  {
+  padding-right: 4vw;
+  
+  display: flex;
+
+ 
+}
+
+.panier-img , .compte-img{
+  padding-right: 2vw;
+  width: 2vw;
+  height: 2vw;
+}
+
+.panier-div {
+ 
+}
+
+.quantity {
+  height: 1vw;
+  width: 1vw;
+  background-color: red;
+  color: white;
+  font-size: 1vw;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  right: 7.5%;
+ 
+}
+
+
+/**  Panier code commence ici...........................................*/
+
+
+
+.fond {
+    position: fixed; 
+    top: 20px;  
+   background-color: rgba(0, 0, 0, 0.7);
+   height:100%;
+   width: 100%;
+   display: none;
+   justify-content: center;
+   align-items: center;
+}
+
+.popupContenu {
+  position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #FFF8F0;
+    height: 400px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 4px 6px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.popup-hero {
+    font-family: 'anton', sans-serif;
+    
+   
+    
+}
+
+.compte-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #B8860B;
+}
+
+.compte-link a {
+  padding: 10px;
+   color: #B8860B;
+   text-decoration: none;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    padding-bottom: 20px;
+}
+.form-group {
+    padding: 10px;
+  
+  
+}
+
+.btn-submit {
+    margin-top: 10px;
+    width: 50%;
+    padding: 10px;
+    background-color: #B8860B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.exit-div {
+    background-color: black;
+   
+    position: absolute;
+   top: -5px;
+   right: -5px;
+}
+
+#popup-exit, #inscrire-popup-exit {
+    color: white;
+    text-decoration: none;
+  
+   padding: 5px;
+   cursor: pointer;
+}
+
+
+
+.inscrire-fond {
+    position: fixed; 
+    top: 20px;  
+   background-color: rgba(0, 0, 0, 0.7);
+   height:100%;
+   width: 100%;
+   display: none;
+   justify-content: center;
+   align-items: center;
+}
+
+.inscrire-popup{
+  position: relative;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: #FFF8F0;
+    height: 400px;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 4px 6px 8px 0 rgba(0, 0, 0, 0.4);
+}
 
  
 
