@@ -1,25 +1,60 @@
-<?php 
 
-//Connceter la base de données
-$conn = mysqli_connect("localhost", "root", "", "dija_parf_db");
+<?php
+if (isset($_POST['submit'])) {
 
- //Vérifier la connexion
+    // Connexion
+    $conn = mysqli_connect("localhost", "root", "", "dija_parf_db");
 
- if(isset($_POST['submit'])) {
-    $prenom = $_POST["prenom"];
-    $nom = $_POST["nom"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-
-    $query = "INSERT INTO utilisateurs (prenom, nom, email, password) VALUES($prenom, $nom, $email, $password)";
-    $result = mysqli_query($conn, $query);
-    if ($result) {
-        echo "Inscription réussie...";
+    if (!$conn) {
+        die("Erreur de connexion : " . mysqli_connect_error());
     }
- } else {
-    echo " Les informations saisie sont incorrectes! "
 
+    // Sécurisation des données
+    $prenom = mysqli_real_escape_string($conn, $_POST['prenom']);
+    $nom = mysqli_real_escape_string($conn, $_POST['nom']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+
+    // Hash du mot de passe
+    $mot_de_pass = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    // Requête préparée (sécurisée)
+    $sql = "INSERT INTO utilisateurs (prenom, nom, email, mot_de_pass) 
+            VALUES (?, ?, ?, ?)";
+
+    $stmt = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($stmt, "ssss", $prenom, $nom, $email, $mot_de_pass);
+
+    if (mysqli_stmt_execute($stmt)) {
+        echo "Inscription réussie !";
+    } else {
+        echo "Erreur : " . mysqli_error($conn);
+    }
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
 }
-
-
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

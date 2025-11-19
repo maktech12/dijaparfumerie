@@ -222,7 +222,7 @@
                 <input type="password" id="password" name="password" required minlength="8" placeholder="8 caractères minimum">
             </div>
            
-            <button class="btn-submit" type="submit">S'inscrire</button>
+            <button class="btn-submit" type="submit" name="submit">S'inscrire</button>
             
         </form>
                         
@@ -235,12 +235,12 @@
 
 
 
-
+ <script src="javascript.js"></script>
+  
 
 
 </body>
 
-   <script src="javascript.js"></script>
   
   
 
